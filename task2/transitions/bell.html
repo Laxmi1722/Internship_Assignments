@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Bell</title>
+  <style>
+    /* Notification Bell */
+    .notification-bell {
+      display: inline-block;
+      font-size: 50px;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .notification-bell:hover {
+      animation: swing 0.5s ease-in-out;
+    }
+
+    @keyframes swing {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-15deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+      75% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="notification-bell">🔔</div>
+</body>
+</html>

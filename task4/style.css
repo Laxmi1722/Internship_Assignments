@@ -1,0 +1,36 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Div for Mouse Events */
+  #color-div {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 20px;
+  }
+  
+  /* Button Styling */
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  

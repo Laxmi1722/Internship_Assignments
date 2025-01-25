@@ -1,0 +1,242 @@
+/* Base Styles: Desktop View (Default) */
+/* Your existing styles remain mostly unchanged here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#green {
+  background-color: rgba(184, 240, 182, 0.705);
+  block-size: 100vh;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  z-index: -2;
+}
+.card-content {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 20px; /* Add spacing inside the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  width: 90%; /* Card width relative to the viewport */
+  max-width: 800px; /* Set maximum width */
+  margin: 20px auto; /* Center the card */
+}
+#image {
+  background-image: url(mountain.jpg);
+  background-size: cover;
+  block-size: 100vh;
+  opacity: 0.3;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  z-index: -1;
+  background-blend-mode: lighten;
+}
+
+#h1,
+#h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+#h1 {
+  padding-top: 40px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.nav-items li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-items a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-items a:hover {
+  text-decoration: underline;
+}
+
+.contact a {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.vertical-line {
+  height: 200px;
+  width: 2px;
+  background-color: black;
+}
+
+.right-heading {
+  font-size: 52px;
+  font-weight: bolder;
+}
+
+.right-image {
+  width: 250px;
+  max-width: 100%;
+}
+
+.cta-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.footer-text {
+  font-size: 10px;
+}
+
+.social-media img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tablet View (Screens up to 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-image {
+    width: 70%;
+  }
+
+  .left-heading,
+  .right-heading {
+    font-size: 28px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile View (Screens up to 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .logo{
+    margin-left:23px;
+  }
+  .logo-text-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact{
+    margin-left: 34px;
+  }
+  .content-container {
+    gap: 20px;
+  }
+ .heading-container{
+   margin-left:30px;
+ }
+  .left-heading,
+  .right-heading {
+    font-size: 18px;
+  }
+  #h1, #h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 38px;
+  }
+
+}

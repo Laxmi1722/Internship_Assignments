@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* Style only direct `li` children of `ul` */
+        .nav-menu > li {
+          list-style: none;
+          display: inline-block;
+          margin: 0 10px;
+        }
+      
+        /* Links after the active class are dimmed */
+        .active ~ li a {
+          opacity: 0.5;
+        }
+      
+        /* First link after a divider has no margin */
+        .divider + li {
+          margin-left: 0;
+        }
+      
+        /* General link styling */
+        .nav-menu a {
+          text-decoration: none;
+          color: #333;
+        }
+      
+        /* Highlight active link */
+        .active a {
+          font-weight: bold;
+          color: #007BFF;
+        }
+      </style>
+      
+  </head>
+  <body>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Services</a></li>
+      <li class="active"><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </body>
+</html>

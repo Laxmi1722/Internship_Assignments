@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style all inputs inside the form */
+        .custom-form input,
+        .custom-form textarea {
+          width: 100%;
+          padding: 8px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+      
+        /* Required fields after labels */
+        .custom-form label[for]::after {
+          content: "*";
+          color: red;
+          margin-left: 4px;
+        }
+      
+        /* Error messages next to invalid inputs */
+        .custom-form .error {
+          display: none;
+          color: red;
+          font-size: 12px;
+          margin-top: 4px;
+        }
+      
+        /* Show error message when input is invalid */
+        .custom-form input:invalid + .error {
+          display: block;
+        }
+      </style>
+      
+</head>
+<body>
+<div class="card">
+    <form class="custom-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <span class="error">Please enter your name</span>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error">Invalid email</span>
+      
+        <label for="message">Message:</label>
+        <textarea id="message"></textarea>
+      
+        <button type="submit">Submit</button>
+    </form>
+</div>
+    
+</body>
+</html>
