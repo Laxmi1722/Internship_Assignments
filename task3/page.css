@@ -150,9 +150,9 @@ nav .auth-buttons button.book-demo:hover {
     padding: 0 1rem;
 }
 .black-section {
-  background-color: rgb(242, 237, 237);
+  background-color: rgb(8 8 8);
   padding: 4rem 2rem;
-  color: rgb(48, 45, 45);
+  color:rgb(255 255 255);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -172,21 +172,21 @@ nav .auth-buttons button.book-demo:hover {
   width: 80%;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.956);
+  background:rgb(32 31 31 / 96%);
   border-radius: 12px;
 }
 
 .black-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color:#3f3131
+  color:#f1f0f0;
 }
 .black-right {
   width: 80%;
   height: auto;
   margin: 0 auto;
   padding: 1.5rem;  /* Reduced from 2.5rem */
-  background: rgba(255, 255, 255, 0.956);
+  background:rgb(32 31 31 / 96%);
   border-radius: 12px;
       /* Added specific height */
   display: flex;
@@ -415,4 +415,215 @@ label[for=message1] {
 .app-links img {
   height: 40px;
   margin-left: 10px;
+}
+.chat-container {
+  /* width: 400px; */
+  width: 74vw;
+  height: 47vh;
+  padding: 20px;
+  margin-right: 6vw;
+  /* background-color: white; */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color:rgb(244, 165, 7)
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-content {
+  background-color: #ffe97a;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+.message-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #ffe97a transparent transparent;
+}
+
+.message .time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.user-message .message-content {
+  background-color: #b0f0de;
+  color: black;
+}
+
+.user-message .message-content::before {
+  left: auto;
+  right: -10px;
+  border-color: transparent transparent transparent #b0f0de;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .avatar {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.message {
+    margin: 15px 0;
+}
+
+.message:nth-child(1) .message-content {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4); /* violet shadow */
+}
+
+.message:nth-child(2) .message-content {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4); /* reddish-orange shadow */
+}
+
+.message:nth-child(3) .message-content {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 0 4px 15px rgba(0, 119, 190, 0.4); /* ocean blue shadow */
+}
+
+.time {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    background-color: white;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FFC926;
+    box-shadow: 0 0 3px rgba(255, 201, 38, 0.3);
+} 
+/* Keep existing code and add these media queries at the end */
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left-button {
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+
+  .chat-container {
+    width: 90vw;
+    margin: 1rem auto;
+    padding: 10px;
+  }
+
+  .message {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .auth-buttons button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+
+  .left-button {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
